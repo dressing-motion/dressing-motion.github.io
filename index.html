@@ -51,6 +51,7 @@
   </div>
 </section>
 
+<!-- Overview Video -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -67,6 +68,37 @@
   </div>
 </section>
 
+<!-- Real-World Human Study Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-2 has-text-centered">Real-World Human Study</h2>
+
+    <!-- Subsection -->
+    <h3 class="title is-3 has-text-centered">Generalization to Different Arm Motions</h3>
+
+    <!-- Group 1 -->
+    <h4 class="title is-4 has-text-centered">Motion: Lower Arm</h4>
+    <div id="group1" class="columns is-centered">
+      <div class="column is-one-third has-text-centered">
+        <video width="100%" muted playsinline>
+          <source src="static/videos/user_study/ours/study_blurred_user5_m2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <video width="100%" muted playsinline>
+          <source src="static/videos/user_study/ours/study_blurred_user8_m2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <video width="100%" muted playsinline>
+          <source src="static/videos/user_study/ours/study_blurred_user7_m2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- Footer -->
 <footer class="footer">
   <div class="content has-text-centered">
@@ -75,6 +107,31 @@
     </p>
   </div>
 </footer>
+
+<!-- Autoplay on Scroll Script -->
+<script>
+  function setupVideoAutoplay(groupId) {
+    const group = document.getElementById(groupId);
+    const videos = group.querySelectorAll('video');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          videos.forEach(video => {
+            video.play().catch(e => {
+              console.log('Autoplay blocked for', video);
+            });
+          });
+        } else {
+          videos.forEach(video => video.pause());
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(group);
+  }
+
+  setupVideoAutoplay('group1');
+</script>
 
 </body>
 </html>
