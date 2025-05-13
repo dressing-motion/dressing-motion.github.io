@@ -373,7 +373,7 @@
 
 <section class="section">
   <div class="container is-max-desktop has-text-centered">
-    <h4 class="title is-4">Quantitative Results</h4>
+    <h4 class="title is-4">Real-World Quantitative Results</h4>
     <div class="content has-text-justified">
       <p>
         We compare our method against the two baselines on the 48 trials where all methods are evaluated on the same arm motions and garments. As shown in the right table in Figure 2, our method outperforms both baselines in terms of arm dressed ratios. The Likert item responses on the left show that participants generally agree that our method provides a better dressing experience.
@@ -382,8 +382,8 @@
     <div class="columns is-centered">
       <div class="column is-full has-text-centered">
         <figure class="image">
-          <img src="static/figures/comparison_results.png" alt="Figure 2 Likert item responses (left) and average arm dressed ratios (right), evaluated on the 48 trials where the same arm motions and garments are tested for all methods.">
-          <figcaption class="has-text-centered">Figure 2. Likert item responses and arm dressed ratios, evaluated on the 48 trials where the same arm motions and garments are tested for all methods.</figcaption>
+          <img src="static/figures/comparison_results.png" alt="Likert item responses (left) and average arm dressed ratios (right), evaluated on the 48 trials where the same arm motions and garments are tested for all methods.">
+          <figcaption class="has-text-centered">Likert item responses and arm dressed ratios, evaluated on the 48 trials where the same arm motions and garments are tested for all methods.</figcaption>
         </figure>
       </div>
     </div>
@@ -393,6 +393,7 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h3 class="title is-3 has-text-centered">Simulation Results</h3>
+    <p>In simulation, we generate four different body sizes—small, medium, large, and extra large—by varying arm length and arm radius. We define 14 arm motions by executing seven distinct arm motions and replaying each in reverse (14 in total), and select three garments with different sleeve widths and lengths.</p>
     <div id="sim_group" class="mb-6">
 
       <!-- Row 1 -->
@@ -404,7 +405,7 @@
         </div>
         <div class="column is-one-quarter has-text-centered">
           <video width="100%" muted playsinline controls>
-            <source src="static/videos/sim/m2_g2_l.mp4" type="video/mp4">
+            <source src="static/videos/sim/m14_g1_xl.mp4" type="video/mp4">
           </video>
         </div>
         <div class="column is-one-quarter has-text-centered">
@@ -433,12 +434,12 @@
         </div>
         <div class="column is-one-quarter has-text-centered">
           <video width="100%" muted playsinline controls>
-            <source src="static/videos/sim/m8_g2_s.mp4" type="video/mp4">
+            <source src="static/videos/sim/m11_g2_s.mp4" type="video/mp4">
           </video>
         </div>
         <div class="column is-one-quarter has-text-centered">
           <video width="100%" muted playsinline controls>
-            <source src="static/videos/sim/m11_g2_s.mp4" type="video/mp4">
+            <source src="static/videos/sim/m8_g2_s.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -447,12 +448,7 @@
       <div class="columns is-centered" style="margin-bottom: 1rem;">
         <div class="column is-one-quarter has-text-centered">
           <video width="100%" muted playsinline controls>
-            <source src="static/videos/sim/m14_g1_xl.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column is-one-quarter has-text-centered">
-          <video width="100%" muted playsinline controls>
-            <source src="static/videos/sim/m16_g2_s.mp4" type="video/mp4">
+            <source src="static/videos/sim/m2_g2_l.mp4" type="video/mp4">
           </video>
         </div>
         <div class="column is-one-quarter has-text-centered">
@@ -462,11 +458,40 @@
         </div>
         <div class="column is-one-quarter has-text-centered">
           <video width="100%" muted playsinline controls>
+            <source src="static/videos/sim/m16_g2_s.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-quarter has-text-centered">
+          <video width="100%" muted playsinline controls>
             <source src="static/videos/sim/m18_g1_xl.mp4" type="video/mp4">
           </video>
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h4 class="title is-4">Simulation Quantitative Results</h4>
+    <div class="content has-text-justified">
+      <p>
+        Our method achieves the highest upper arm dressed ratio on 13 of 14 arm motions and across all body sizes, outperforming the baselines by 0.15-0.28. Notably, while all other methods show clear performance degradation as body size increases from Medium (the training body size) to Large and Extra Large, our method maintains consistent performance across all three unseen body sizes.
+      </p>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <figure class="image mb-5">
+          <img src="static/figures/sim_table1.png" alt="Upper arm dressed ratio of all methods across different body sizes.">
+          <figcaption class="has-text-centered">Upper arm dressed ratio of all methods across different body sizes.</figcaption>
+        </figure>
+        <figure class="image mb-5">
+          <img src="static/figures/sim_table2.png" alt="Upper arm dressed ratio of all methods across different arm motions. “rev.” denotes the
+          reversed version of the original motion.">
+          <figcaption class="has-text-centered">Upper arm dressed ratio of all methods across different arm motions. “rev.” denotes the reversed version of the original motion.</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
