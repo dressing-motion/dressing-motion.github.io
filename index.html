@@ -476,12 +476,12 @@
   <div class="container is-max-desktop has-text-centered">
     <h4 class="title is-4">Simulation Quantitative Results</h4>
     <div class="content has-text-justified">
-      <p>
+      <p class="mb-5">
         Our method achieves the highest upper arm dressed ratio on 13 of 14 arm motions and across all body sizes, outperforming the baselines by 0.15-0.28. Notably, while all other methods show clear performance degradation as body size increases from Medium (the training body size) to Large and Extra Large, our method maintains consistent performance across all three unseen body sizes.
       </p>
     </div>
     <div class="columns is-centered">
-      <div class="column is-full has-text-centered">
+      <div class="column is-three-quarters has-text-centered">
         <figure class="image mb-5">
           <img src="static/figures/sim_table1.png" alt="Upper arm dressed ratio of all methods across different body sizes.">
           <figcaption class="has-text-centered">Upper arm dressed ratio of all methods across different body sizes.</figcaption>
@@ -532,5 +532,7 @@
   setupVideoAutoplay('cp_group3');
   setupVideoAutoplay('cp_group4');
   setupVideoAutoplay('cp_group5');
+  setupVideoAutoplay('sim_group');
+
 
 </script>
