@@ -122,6 +122,21 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h4 class="title is-4">Model Architecture</h4>
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <figure class="image">
+          <img src="static/figures/final_method_figure.png" alt="Likert item responses (left) and average arm dressed ratios (right), evaluated on the 48 trials where the same arm motions and garments are tested for all methods.">
+          <figcaption class="has-text-centered">Overview of our method. (Top) We train a vision-based policy in simulation using reinforcement learning on a diverse range of human arm poses, garments, and body sizes. (Middle) We collect an unlabeled real-world dataset by rolling out the pre-trained policy, generate preference labels using a combination of VLM and time-based signals, and train a reward model to label the dataset. (Bottom) We fine-tune the simulation-pre-trained vision policy on a labeled real-world dataset using both vision and force information. Force signals are injected into the visual network via FiLM layers, which modulate the latent visual features.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- Real-World Human Study Section -->
 <section class="section">
   <div class="container is-max-desktop">
