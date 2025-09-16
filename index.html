@@ -48,9 +48,9 @@
 <section class="hero is-light">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h1 class="title is-2">Multi-Modal Fine-Tuning for Robot-Assisted Dressing with Arm Motions</h1>
+      <h1 class="title is-2">Force-Modulated Visual Policy for Robot-Assisted Dressing with Arm Motions</h1>
       <p class="subtitle is-5">
-        Anonymous Authors
+        Alexis Yihong Hao, Yufei Wang, Navin Sriram Ravie, Bharath Hegde, David Held*, Zackory Erickson*
       </p>
     </div>
   </div>
@@ -71,116 +71,6 @@
     </div>
   </div>
 </section>
-
-<!--Policy Adaptibility and Continuous Robot Motion-->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h3 class="title is-3 has-text-centered">*Policy Adaptibility and Continuous Robot Motion*</h3>
-    <h5 class="title is-5">Adaptibility to Different Arm Motions</h5>
-    <p class="mb-5">We show comparisons across trials to highlight the policy's adaptability to different arm motions. Rather than waiting passively, the policy continuously adjusts and makes progress throughout dressing.   </p>
-    <div class="columns is-centered mb-4">
-      <div class="column is-half has-text-centered">
-        <strong class="title is-4">Trial A</strong>
-      </div>
-      <div class="column is-half has-text-centered">
-        <strong class="title is-4">Trial B</strong>
-      </div>
-    </div>
-
-    <!-- Group 1 -->
-    <p class="mb-5">In Trial A, the participant <b>extends their arm downward</b>, leaving it mostly straight after the motion. As a result, the robot <b>pulls the garment directly towards the shoulder</b> without turning behind the arm. In contrast, in Trial B, the robot <b>pulls the garment further behind the elbow</b> to make a broader turn, adapting to the participant's <b>more bent arm posture</b>.</p>
-    <div id="ad_group1" class="columns is-centered mb-6">
-      <div class="column is-half has-text-centered">
-        <video width="100%" muted playsinline controls>
-          <source src="static/videos/user_study/ours/study_blurred_user7_m2.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="column is-half has-text-centered">
-        <video width="100%" muted playsinline controls>
-          <source src="static/videos/user_study/ours/study_blurred_user6_m8.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <div class="columns is-centered mb-4">
-      <div class="column is-half has-text-centered">
-        <strong class="title is-4">Trial A</strong>
-      </div>
-      <div class="column is-half has-text-centered">
-        <strong class="title is-4">Trial B</strong>
-      </div>
-    </div>
-
-    <!-- Group 2 -->
-    <p class="mb-5">In Trial A, the participant <b>keeps their forearm bent sharply</b> while scrolling on their phone. To avoid snagging on the elbow, the robot <b>moves on the outer side of the arm</b>, making a wider turn around the elbow. In Trial B, the participant <b>extends their arm slightly forward</b>, positioning the elbow ahead of the shoulder. As a result, the robot <b>takes a more direct path</b> and begins aligning the garment with the shoulder earlier.</p>
-    <div id="ad_group2" class="columns is-centered mb-6">
-      <div class="column is-half has-text-centered">
-        <video width="100%" muted playsinline controls>
-          <source src="static/videos/user_study/ours/study_blurred_user4_m5.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="column is-half has-text-centered">
-        <video width="100%" muted playsinline controls>
-          <source src="static/videos/user_study/ours/study_blurred_user9_m4.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <div class="columns is-centered mb-4">
-      <div class="column is-half has-text-centered">
-        <strong class="title is-4">Trial A</strong>
-      </div>
-      <div class="column is-half has-text-centered">
-        <strong class="title is-4">Trial B</strong>
-      </div>
-    </div>
-
-    <!-- Group 3 -->
-    <p class="mb-5">In Trial A, the participant <b>holds their arm in a higher, L-shaped position</b>. In response, the robot <b>pulls the garment further behind the elbow</b>, making a bigger turn to prevent the garment from snagging on the elbow. In Trial B, the participant <b>extends their arm to the side</b> and moves it up and down several times. The robot responds by <b>shifting toward this sideward arm position</b>. Notably, when the participant retracts their arm into a bent position, the robot quickly adapts and successfully places the garment on the participant’s shoulder. </p>
-    <div id="ad_group3" class="columns is-centered mb-6">
-      <div class="column is-half has-text-centered">
-        <video width="100%" muted playsinline controls>
-          <source src="static/videos/user_study/ours/study_blurred_user5_m3.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="column is-half has-text-centered">
-        <video width="100%" muted playsinline controls>
-          <source src="static/videos/user_study/ours/study_blurred_user7_m8.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-
-    <h5 class="title is-5">Adaptibility to Different Garments</h5>
-
-    <!-- Group 4 -->
-    <p class="mb-5">These examples highlight that the policy adapts to different garment properties. Compared to the jacket, the plaid shirt has <b>wider shoulder openings</b>, which exert <b>less force on the participant</b> as it is pulled onto the arm. In response, for some arm motions, the policy <b>pulls further behind the person's arm when dressing with the plaid shirt</b>. This behavior helps avoid snags from small turns and takes advantage of the wider openings to reduce applied force. In contrast, for the jacket—where tighter sleeves require more precision—the policy follows a more standard dressing trajectory. </p>
-    <div id="ad_group4" class="columns is-centered mb-6">
-      <div class="column is-half has-text-centered">
-        <video width="100%" muted playsinline controls>
-          <source src="static/videos/user_study/ours/study_blurred_user4_m6.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="column is-half has-text-centered">
-        <video width="100%" muted playsinline controls>
-          <source src="static/videos/user_study/ours/study_blurred_user9_m6.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-
-    <!-- Group 5 -->
-    <div id="ad_group5" class="columns is-centered mb-6">
-      <div class="column is-half has-text-centered">
-        <video width="100%" muted playsinline controls>
-          <source src="static/videos/user_study/ours/study_blurred_user8_m2.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="column is-half has-text-centered">
-        <video width="100%" muted playsinline controls>
-          <source src="static/videos/user_study/ours/study_blurred_user7_m2.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <!-- Overview Video -->
 <section class="section">
@@ -461,6 +351,115 @@
       <div class="column is-one-third has-text-centered">
         <video width="100%" muted playsinline controls>
           <source src="static/videos/user_study/compare/study_blurred_user8_m2_fcvp.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Policy Adaptibility and Continuous Robot Motion-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h3 class="title is-3 has-text-centered">*Policy Adaptibility and Continuous Robot Motion*</h3>
+    <h5 class="title is-5">Adaptibility to Different Arm Motions</h5>
+    <p class="mb-5">We show comparisons across trials to highlight the policy's adaptability to different arm motions. Rather than waiting passively, the policy continuously adjusts and makes progress throughout dressing.   </p>
+    <div class="columns is-centered mb-4">
+      <div class="column is-half has-text-centered">
+        <strong class="title is-4">Trial A</strong>
+      </div>
+      <div class="column is-half has-text-centered">
+        <strong class="title is-4">Trial B</strong>
+      </div>
+    </div>
+
+    <!-- Group 1 -->
+    <p class="mb-5">In Trial A, the participant <b>extends their arm downward</b>, leaving it mostly straight after the motion. As a result, the robot <b>pulls the garment directly towards the shoulder</b> without turning behind the arm. In contrast, in Trial B, the robot <b>pulls the garment further behind the elbow</b> to make a broader turn, adapting to the participant's <b>more bent arm posture</b>.</p>
+    <div id="ad_group1" class="columns is-centered mb-6">
+      <div class="column is-half has-text-centered">
+        <video width="100%" muted playsinline controls>
+          <source src="static/videos/user_study/ours/study_blurred_user7_m2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-half has-text-centered">
+        <video width="100%" muted playsinline controls>
+          <source src="static/videos/user_study/ours/study_blurred_user6_m8.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="columns is-centered mb-4">
+      <div class="column is-half has-text-centered">
+        <strong class="title is-4">Trial A</strong>
+      </div>
+      <div class="column is-half has-text-centered">
+        <strong class="title is-4">Trial B</strong>
+      </div>
+    </div>
+
+    <!-- Group 2 -->
+    <p class="mb-5">In Trial A, the participant <b>keeps their forearm bent sharply</b> while scrolling on their phone. To avoid snagging on the elbow, the robot <b>moves on the outer side of the arm</b>, making a wider turn around the elbow. In Trial B, the participant <b>extends their arm slightly forward</b>, positioning the elbow ahead of the shoulder. As a result, the robot <b>takes a more direct path</b> and begins aligning the garment with the shoulder earlier.</p>
+    <div id="ad_group2" class="columns is-centered mb-6">
+      <div class="column is-half has-text-centered">
+        <video width="100%" muted playsinline controls>
+          <source src="static/videos/user_study/ours/study_blurred_user4_m5.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-half has-text-centered">
+        <video width="100%" muted playsinline controls>
+          <source src="static/videos/user_study/ours/study_blurred_user9_m4.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="columns is-centered mb-4">
+      <div class="column is-half has-text-centered">
+        <strong class="title is-4">Trial A</strong>
+      </div>
+      <div class="column is-half has-text-centered">
+        <strong class="title is-4">Trial B</strong>
+      </div>
+    </div>
+
+    <!-- Group 3 -->
+    <p class="mb-5">In Trial A, the participant <b>holds their arm in a higher, L-shaped position</b>. In response, the robot <b>pulls the garment further behind the elbow</b>, making a bigger turn to prevent the garment from snagging on the elbow. In Trial B, the participant <b>extends their arm to the side</b> and moves it up and down several times. The robot responds by <b>shifting toward this sideward arm position</b>. Notably, when the participant retracts their arm into a bent position, the robot quickly adapts and successfully places the garment on the participant’s shoulder. </p>
+    <div id="ad_group3" class="columns is-centered mb-6">
+      <div class="column is-half has-text-centered">
+        <video width="100%" muted playsinline controls>
+          <source src="static/videos/user_study/ours/study_blurred_user5_m3.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-half has-text-centered">
+        <video width="100%" muted playsinline controls>
+          <source src="static/videos/user_study/ours/study_blurred_user7_m8.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <h5 class="title is-5">Adaptibility to Different Garments</h5>
+
+    <!-- Group 4 -->
+    <p class="mb-5">These examples highlight that the policy adapts to different garment properties. Compared to the jacket, the plaid shirt has <b>wider shoulder openings</b>, which exert <b>less force on the participant</b> as it is pulled onto the arm. In response, for some arm motions, the policy <b>pulls further behind the person's arm when dressing with the plaid shirt</b>. This behavior helps avoid snags from small turns and takes advantage of the wider openings to reduce applied force. In contrast, for the jacket—where tighter sleeves require more precision—the policy follows a more standard dressing trajectory. </p>
+    <div id="ad_group4" class="columns is-centered mb-6">
+      <div class="column is-half has-text-centered">
+        <video width="100%" muted playsinline controls>
+          <source src="static/videos/user_study/ours/study_blurred_user4_m6.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-half has-text-centered">
+        <video width="100%" muted playsinline controls>
+          <source src="static/videos/user_study/ours/study_blurred_user9_m6.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Group 5 -->
+    <div id="ad_group5" class="columns is-centered mb-6">
+      <div class="column is-half has-text-centered">
+        <video width="100%" muted playsinline controls>
+          <source src="static/videos/user_study/ours/study_blurred_user8_m2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-half has-text-centered">
+        <video width="100%" muted playsinline controls>
+          <source src="static/videos/user_study/ours/study_blurred_user7_m2.mp4" type="video/mp4">
         </video>
       </div>
     </div>
